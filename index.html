@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interview Mastery Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./"
+        ><b>IM</b
+        ><span>INTERVIEW MASTERY<small>PREP COMMAND CENTER</small></span></a
+      >
+      <div class="timer">
+        MOCK TIMER <strong id="timer">15:00</strong
+        ><button id="timerBtn">Start</button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="kicker">PRACTICE / REFLECT / IMPROVE</p>
+          <h1>Turn knowledge into<br /><em>clear answers.</em></h1>
+        </div>
+        <div class="metrics">
+          <span><b id="answered">0</b>Practiced</span
+          ><span><b id="strong">0</b>Confident</span
+          ><span><b id="saved">0</b>Saved</span>
+        </div>
+      </section>
+      <section class="tools">
+        <input id="search" placeholder="Search questions…" /><select id="topic">
+          <option value="all">All topics</option></select
+        ><select id="level">
+          <option value="all">All levels</option>
+          <option>Foundation</option>
+          <option>Intermediate</option>
+          <option>Advanced</option></select
+        ><button class="primary" id="random">Random question</button>
+      </section>
+      <section class="layout">
+        <aside class="panel list" id="questions"></aside>
+        <article class="panel practice">
+          <div class="meta">
+            <span id="qtopic"></span><span id="qlevel"></span
+            ><button id="bookmark">☆ Save</button>
+          </div>
+          <h2 id="question"></h2>
+          <button class="primary reveal" id="reveal">Reveal answer</button>
+          <div id="answer" class="answer"></div>
+          <div class="confidence">
+            <p>How confident are you?</p>
+            <button data-rate="1">Need review</button
+            ><button data-rate="2">Getting there</button
+            ><button data-rate="3">Strong</button>
+          </div>
+          <label
+            >PERSONAL NOTES<textarea
+              id="notes"
+              placeholder="Write your answer structure, examples or follow-up questions…"
+            ></textarea>
+          </label>
+        </article>
+      </section>
+    </main>
+    <style>
+      .profile-footer .social {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #60708e66;
+        border-radius: 11px;
+        color: #dce8ff;
+        text-decoration: none;
+        background: #07101c;
+      }
+      .profile-footer .social:hover {
+        border-color: #22d3ee;
+        color: #22d3ee;
+        transform: translateY(-2px);
+      }
+      .profile-footer .tech {
+        padding: 4px 10px;
+        border: 1px solid #52618155;
+        border-radius: 5px;
+        font: 700 9px ui-monospace;
+        color: #9fb0c9;
+      }
+      .profile-footer a {
+        text-decoration: none;
+      }
+    </style>
+    <footer
+      class="profile-footer"
+      style="
+        display: block;
+        width: min(1260px, 92%);
+        margin: 55px auto 24px;
+        padding: 30px 24px 18px;
+        border: 1px solid #52618145;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          #040915f5,
+          #071522f0 55%,
+          #170a1ded
+        );
+        box-shadow: 0 24px 70px #0008;
+        overflow: hidden;
+        color: #91a0b9;
+      "
+    >
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(280px, 100%), 1fr)
+          );
+          gap: 46px;
+        "
+      >
+        <section>
+          <b style="font: 900 21px ui-monospace; color: #b66cff"
+            ><i style="color: #22d3ee; font-style: normal">[</i>SM<i
+              style="color: #22d3ee; font-style: normal"
+              >]</i
+            ></b
+          >
+          <p style="max-width: 480px; color: #aab8d0; line-height: 1.7">
+            Learning by building — from modern web experiences to strong
+            software-engineering fundamentals.
+          </p>
+          <small
+            style="
+              font: 700 9px ui-monospace;
+              letter-spacing: 0.18em;
+              color: #70829e;
+            "
+            >B.TECH IT STUDENT · FULL STACK DEVELOPER · BUILDER</small
+          >
+          <div style="display: flex; gap: 10px; margin-top: 20px">
+            <a class="social" href="https://github.com/sudesh4545">GH</a
+            ><a class="social" href="https://www.linkedin.com/in/sudeshmehar3/"
+              >in</a
+            ><a class="social" href="mailto:sudeshmehar3@gmail.com">@</a
+            ><a
+              class="social"
+              href="https://sudesh4545.github.io/sudesh-portfolio/"
+              >↗</a
+            >
+          </div>
+        </section>
+        <section>
+          <b
+            style="
+              font: 800 9px ui-monospace;
+              letter-spacing: 0.2em;
+              color: #fff;
+            "
+            >GET IN TOUCH</b
+          ><a
+            href="mailto:sudeshmehar3@gmail.com"
+            style="display: block; margin-top: 20px; color: #9fc6ff"
+            >sudeshmehar3@gmail.com</a
+          >
+          <p>New Delhi, India</p>
+          <p style="color: #c5f9e8">
+            <i
+              style="
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #20e7a8;
+                box-shadow: 0 0 14px #20e7a8;
+                margin-right: 8px;
+              "
+            ></i
+            >Open to internships &amp; collaboration
+          </p>
+          <div style="display: flex; gap: 7px; flex-wrap: wrap">
+            <span class="tech">TypeScript</span><span class="tech">HTML</span
+            ><span class="tech">CSS</span>
+          </div>
+        </section>
+      </div>
+      <div
+        style="
+          margin-top: 28px;
+          padding-top: 17px;
+          border-top: 1px solid #5261812e;
+          color: #65738c;
+          font-size: 10px;
+        "
+      >
+        © 2026 Sudesh Mehar. Built with code, curiosity and creativity.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
